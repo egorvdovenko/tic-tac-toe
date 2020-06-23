@@ -1,8 +1,12 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+
+#include "shape_enum.h"
+#include "screen_enum.h"
 
 int main(int argc, char *argv[])
-{
+{   
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
@@ -14,6 +18,12 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+
+    Shape_Enum::declareQML();
+    Screen_Enum::declareQML();
+
+    qRegisterMetaType<QVector<QVector<int>>>();
+
     engine.load(url);
 
     return app.exec();
