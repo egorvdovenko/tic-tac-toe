@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>screens/StartScreen.qml</file>
+        <file>screens/SelectionScreen.qml</file>
+        <file>components/CustomButton.qml</file>
+        <file>images/circle.svg</file>
+        <file>images/cross.svg</file>
+        <file>screens/GameScreen.qml</file>
+        <file>screens/FinishScreen.qml</file>
+        <file>scripts/game_engine.js</file>
+    </qresource>
+</RCC>
